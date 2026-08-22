@@ -1,0 +1,9 @@
+{
+  "name": "calculadora-moderna",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Calculadora responsiva criada para estudar lógica de programação.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

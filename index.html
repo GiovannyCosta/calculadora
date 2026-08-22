@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Calculadora moderna, responsiva e acessível." />
+  <meta name="theme-color" content="#10131a" />
+
+  <!-- Arquivos usados pela página -->
+  <link rel="icon" href="./assets/icons/favicon.ico" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <script src="./assets/js/calculadora.js" defer></script>
+
+  <title>Calculadora</title>
+</head>
+
+<body>
+  <!-- Conteúdo principal: apresentação e calculadora -->
+  <main class="conteudo-principal">
+    <section class="apresentacao" aria-labelledby="titulo-pagina">
+      <p class="texto-destaque">Ferramenta digital</p>
+
+      <h1 id="titulo-pagina">
+        Calcule com<br />
+        <span>clareza.</span>
+      </h1>
+
+      <p class="descricao">
+        Uma calculadora rápida, minimalista e pronta para acompanhar sua rotina.
+      </p>
+
+      <!-- Atalhos disponíveis para quem usa teclado físico -->
+      <div class="atalhos" aria-label="Atalhos disponíveis">
+        <span><kbd>Esc</kbd> limpar</span>
+        <span><kbd>⌫</kbd> apagar</span>
+        <span><kbd>Enter</kbd> calcular</span>
+      </div>
+
+      <!-- Link para o repositório no GitHub -->
+      <a class="link-github" href="https://github.com/GiovannyCosta/calculadora" target="_blank" rel="noreferrer">
+        Ver projeto no GitHub <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+
+    <!-- aria-label ajuda leitores de tela a identificar o componente -->
+    <section class="calculadora" aria-label="Calculadora">
+      <header class="cabecalho-calculadora">
+        <div class="marca">
+          <span class="ponto-marca"></span>
+          calc.
+        </div>
+        <span class="status">online</span>
+      </header>
+
+      <!-- aria-live mostra o resultado quando o conteúdo mudar -->
+      <div class="tela" aria-live="polite" aria-atomic="true">
+        <div id="operacao-anterior" class="operacao-anterior">&nbsp;</div>
+        <output id="operacao-atual" class="operacao-atual">0</output>
+      </div>
+
+      <!-- data-acao e data-valor são lidos pelo JavaScript -->
+      <div class="teclado-calculadora">
+        <button class="botao botao-utilitario" data-acao="limpar">AC</button>
+        <button class="botao botao-utilitario" data-acao="sinal" aria-label="Trocar sinal">±</button>
+        <button class="botao botao-utilitario" data-acao="porcentagem" aria-label="Porcentagem">%</button>
+        <button class="botao botao-operador" data-acao="operador" data-valor="÷" aria-label="Dividir">÷</button>
+
+        <button class="botao" data-acao="numero" data-valor="7">7</button>
+        <button class="botao" data-acao="numero" data-valor="8">8</button>
+        <button class="botao" data-acao="numero" data-valor="9">9</button>
+        <button class="botao botao-operador" data-acao="operador" data-valor="×" aria-label="Multiplicar">×</button>
+
+        <button class="botao" data-acao="numero" data-valor="4">4</button>
+        <button class="botao" data-acao="numero" data-valor="5">5</button>
+        <button class="botao" data-acao="numero" data-valor="6">6</button>
+        <button class="botao botao-operador" data-acao="operador" data-valor="−" aria-label="Subtrair">−</button>
+
+        <button class="botao" data-acao="numero" data-valor="1">1</button>
+        <button class="botao" data-acao="numero" data-valor="2">2</button>
+        <button class="botao" data-acao="numero" data-valor="3">3</button>
+        <button class="botao botao-operador" data-acao="operador" data-valor="+" aria-label="Somar">+</button>
+
+        <button class="botao botao-zero" data-acao="numero" data-valor="0">0</button>
+        <button class="botao" data-acao="decimal" aria-label="Separador decimal">,</button>
+        <button class="botao botao-igual" data-acao="igual" aria-label="Calcular resultado">=</button>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
